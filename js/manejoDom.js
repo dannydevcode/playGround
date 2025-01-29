@@ -2,6 +2,9 @@ const titulo = document.querySelector("h1");
 console.log(titulo);
 console.log(titulo.textContent);
 
+const elementos = document.getElementsByTagName('div');
+console.log(elementos);
+
 const subTitulo = document.getElementById("subTitulo");
 
 const buttonSub = document.getElementById("subBtn");
@@ -27,4 +30,22 @@ buttonGenerar.addEventListener('click', () => {
     nuevoParrafo.textContent = "Nuevo párrafo agregado! :)";
     document.body.appendChild(nuevoParrafo);
     
+});
+
+const contenedor = document.getElementById("contenedor");
+
+const botonGenerarDiv = document.getElementById("generarDiv");
+botonGenerarDiv.addEventListener('click', () => {
+    const nuevoDiv = document.createElement('div');
+    nuevoDiv.style.border = '1px solid black';
+    nuevoDiv.style.padding = '10px';
+    nuevoDiv.style.margin = '10px 0';
+    
+    const nuevoParrafo2 = document.createElement('p');
+    nuevoParrafo2.textContent = "parrafo dentro del div";
+    
+    //agregar parrafo al div
+    nuevoDiv.appendChild(nuevoParrafo2);
+    //agregar div al contenedor
+    contenedor.appendChild(nuevoDiv);
 });
