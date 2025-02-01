@@ -48,4 +48,5 @@ botonGenerarDiv.addEventListener('click', () => {
     nuevoDiv.appendChild(nuevoParrafo2);
     //agregar div al contenedor
     contenedor.appendChild(nuevoDiv);
+    
 });
