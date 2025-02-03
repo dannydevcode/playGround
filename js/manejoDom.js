@@ -35,6 +35,7 @@ buttonGenerar.addEventListener('click', () => {
 const contenedor = document.getElementById("contenedor");
 
 const botonGenerarDiv = document.getElementById("generarDiv");
+const borrarDiv = document.getElementById('borrarDiv');
 botonGenerarDiv.addEventListener('click', () => {
     const nuevoDiv = document.createElement('div');
     nuevoDiv.style.border = '1px solid black';
@@ -49,4 +50,9 @@ botonGenerarDiv.addEventListener('click', () => {
     //agregar div al contenedor
     contenedor.appendChild(nuevoDiv);
     
+});
+borrarDiv.addEventListener('click', () => {
+    if(contenedor.lastChild) {
+        contenedor.removeChild(contenedor.lastChild);
+    }
 });
